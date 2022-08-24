@@ -1,0 +1,152 @@
+.navbar
+{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    background-color: #94B49F;
+    justify-content: space-between;
+    /*background-color: rgb(123, 184, 123);*/
+}
+.navbar .logo
+{
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px ;
+    height: 100%;
+}
+
+.nav-bag
+{
+  display: flex;
+  align-items: center;
+  padding-right: 10px ;
+}
+
+.bag-quantity
+{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 5px;
+  background: yellow;
+  font-size: 14px;
+  border-radius: 50%;
+  font-weight: 700;
+  margin-left: 5px;
+  color: black;
+}
+
+
+.navbar .logo img{
+    width: 150px;
+}
+.navbar .nav-links
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    flex: 30%;
+    font-size: 20px;
+}
+.navbar a
+{
+    color: #FCF8E8;
+    margin: 25px;
+    text-decoration: none;
+    position: relative;
+    font-size: 25px;
+}
+
+.nav-links button
+{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.navbar .nav-links svg 
+{
+    font-size: 40px;
+}
+
+.navbar .nav-links a::after
+{
+	content: '';
+	background: white;
+	width: 0%;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: width 0.5s; 
+}
+.navbar .nav-links a:hover::after
+{
+	width: 100%;
+}
+
+  .navbar #open {
+    padding-left: 0px;
+  }
+  .navbar #open img {
+    display: none;
+  }
+  
+  .navbar #close img {
+    display: inherit;
+  }
+  
+  .navbar #open .hidden-links {
+    display: inherit;
+    margin-left: 30px;
+  }
+  
+  .navbar #close .hidden-links {
+    display: none;
+  }
+  
+  .navbar #open a {
+    width: 70px;
+    margin: 15px;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .navbar .nav-links a {
+      width: 50px;
+    }
+    .navbar .logo {
+      padding-left: 50px;
+    }
+  }
+
+@media only screen and (max-width: 600px) 
+{
+    .navbar .nav-links
+    {
+        justify-content: flex-end;
+        padding-right: 50px;
+    }  
+    .navbar .nav-links a
+    {
+        display: none;
+    }
+    .navbar .nav-links button
+    {
+        display: inherit;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .navbar .nav-links button {
+      display: none;
+    }
+  
+    .hiddenLinks {
+      display: none;
+    }
+  }
+
